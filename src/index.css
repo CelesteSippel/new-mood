@@ -123,7 +123,7 @@ input {
 
 .email-list input[type='email']::placeholder {
   color: pink;
-  font-size: 2em;
+  font-size: 1.5em;
 }
 
 .padding {
@@ -168,4 +168,11 @@ input {
 .fa-spotify:hover,
 .fa-facebook-f:hover {
   color: salmon;
+}
+
+.name:hover,
+.nav-details:hover {
+  color: salmon;
+  cursor: pointer;
+  transition: all 0.7s ease;
 }

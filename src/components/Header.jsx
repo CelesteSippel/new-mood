@@ -13,8 +13,7 @@ const Header = () => {
         <ul className="sub-nav">
           <li>
             <Link to="/Music" className="nav-details">
-              {' '}
-              Music{' '}
+              Music
             </Link>
           </li>
           <li>
