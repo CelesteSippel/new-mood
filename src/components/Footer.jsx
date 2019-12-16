@@ -22,20 +22,20 @@ const Footer = () => {
       <ul className="social-media">
         <li>
           <a href="https://www.instagram.com/newmoodband/">
-            <i className="fab fa-instagram space"></i>
+            <i className="fab fa-instagram"></i>
           </a>
         </li>
         <li>
           <a href="https://www.facebook.com/thenewmood/">
-            <i className="fab fa-facebook-f space"></i>
+            <i className="fab fa-facebook-f"></i>
           </a>
         </li>
         <li>
-          <i className="fab fa-spotify space"></i>
+          <i className="fab fa-spotify"></i>
         </li>
         <li>
           <a href="https://www.youtube.com/channel/UC6FuAGJqCidJf-PRrHY93rg">
-            <i class="fab fa-youtube space"></i>
+            <i class="fab fa-youtube"></i>
           </a>
         </li>
       </ul>

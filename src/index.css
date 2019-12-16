@@ -66,14 +66,13 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
-  /* border: lawngreen solid 5px; */
 }
 
 .video {
   display: flex;
   position: relative;
 
-  height: 50rem;
+  height: 45rem;
   width: 100%;
 }
 img {
@@ -81,6 +80,7 @@ img {
 }
 
 .footer {
+  margin-top: 0;
   margin-bottom: 1.75rem;
 }
 .footer-text {
@@ -116,6 +116,16 @@ input {
   color: white;
 }
 
+.email-list input[type='email'] {
+  border: 0;
+  border-bottom: 1px solid white;
+}
+
+.email-list input[type='email']::placeholder {
+  color: pink;
+  font-size: 2em;
+}
+
 .padding {
   padding: 1.5rem;
 }
@@ -124,8 +134,11 @@ input {
   justify-content: center;
   margin-left: 1rem;
   font-size: 1rem;
-  height: 32px;
-  width: 64px;
+  height: 36px;
+  width: 72px;
+  color: white;
+  background-color: salmon;
+  font-weight: 500;
   border-radius: 4px;
 }
 .button:hover {
@@ -134,8 +147,10 @@ input {
 }
 
 .social-media {
+  margin: 0 auto;
   display: flex;
-  justify-content: center;
+  justify-content: space-between;
+  max-width: 160px;
 }
 
 .fa-youtube,
@@ -144,9 +159,13 @@ input {
 .fa-facebook-f {
   color: white;
   font-size: 1.25rem;
+  cursor: pointer;
+  transition: all 0.7s ease;
 }
 
-.space {
-  padding-left: 1rem;
-  padding-right: 1rem;
+.fa-youtube:hover,
+.fa-instagram:hover,
+.fa-spotify:hover,
+.fa-facebook-f:hover {
+  color: salmon;
 }
