@@ -13,6 +13,7 @@ body {
   flex-direction: column;
   justify-content: space-between;
   background-color: rgb(65, 159, 173);
+  font-family: 'Raleway', sans-serif;
 }
 
 a:link {
@@ -65,4 +66,87 @@ li {
   background-position: center;
   background-repeat: no-repeat;
   background-size: cover;
+  /* border: lawngreen solid 5px; */
+}
+
+.video {
+  display: flex;
+  position: relative;
+
+  height: 50rem;
+  width: 100%;
+}
+img {
+  width: 100%;
+}
+
+.footer {
+  margin-bottom: 1.75rem;
+}
+.footer-text {
+  display: flex;
+  justify-content: center;
+  margin: 2rem;
+  color: white;
+  font-size: 2.15rem;
+}
+
+input {
+  text-rendering: auto;
+  word-spacing: normal;
+  text-align: start;
+  cursor: text;
+  font-style: normal;
+  line-height: 1rem;
+  font-weight: 400;
+
+  color: black;
+  background-color: transparent;
+  height: 20px;
+  width: 30%;
+}
+
+.email-list {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 1.6rem;
+  font-weight: 300;
+  margin: 1rem;
+  color: white;
+}
+
+.padding {
+  padding: 1.5rem;
+}
+.button {
+  display: flex;
+  justify-content: center;
+  margin-left: 1rem;
+  font-size: 1rem;
+  height: 32px;
+  width: 64px;
+  border-radius: 4px;
+}
+.button:hover {
+  background-color: black;
+  color: white;
+}
+
+.social-media {
+  display: flex;
+  justify-content: center;
+}
+
+.fa-youtube,
+.fa-instagram,
+.fa-spotify,
+.fa-facebook-f {
+  color: white;
+  font-size: 1.25rem;
+}
+
+.space {
+  padding-left: 1rem;
+  padding-right: 1rem;
 }
