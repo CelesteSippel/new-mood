@@ -18,6 +18,7 @@ body {
 
 a:link {
   text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
 
 li {
@@ -29,6 +30,7 @@ li {
   flex-direction: row;
   justify-content: space-between;
   align-items: baseline;
+  position: fixed;
   background-color: transparent;
   width: 100%;
   height: 100%;
@@ -40,10 +42,10 @@ li {
   align-items: center;
   padding: 0.5rem;
   margin-left: 3rem;
-  margin-top: 1rem;
-  margin-bottom: 1rem;
-  font-size: 2.5rem;
-  font-weight: lighter;
+  margin-top: 0.25rem;
+  margin-bottom: 0.25rem;
+  font-size: 3rem;
+  font-weight: bold;
   color: white;
 }
 
@@ -61,6 +63,13 @@ li {
   font-weight: lighter;
 }
 
+#nav-back-ground {
+  margin-top: 2rem;
+  margin-bottom: 4rem;
+
+  height: 100%;
+  background-color: rgb(65, 159, 173);
+}
 .hero-pic {
   display: flex;
   background-position: center;
@@ -174,5 +183,5 @@ input {
 .nav-details:hover {
   color: salmon;
   cursor: pointer;
-  transition: all 0.7s ease;
+  transition: all 0.4s ease;
 }
