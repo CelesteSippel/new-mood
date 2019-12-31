@@ -5,7 +5,12 @@ const Shows = () => {
   return (
     <>
       <Header />
-      <div>Shows</div>
+      <div>
+        <h2 className="upcoming-shows">Upcoming Shows</h2>
+        <section className="events">
+          <section className="event-info"></section>
+        </section>
+      </div>
       <Footer />
     </>
   )
