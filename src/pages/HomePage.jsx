@@ -1,6 +1,6 @@
 import React from 'react'
 import Header from '../components/Header'
-import brewery from '../assets/brewery.JPG'
+import pink from '../assets/pink.JPG'
 import Footer from '../components/Footer'
 
 const HomePage = () => {
@@ -10,11 +10,11 @@ const HomePage = () => {
       <div>
         <main>
           <div className="hero-pic">
-            <img src={brewery} />
+            <img src={pink} />
           </div>
           <div className="video">
             <iframe
-              width="1417"
+              width="1438"
               height="715"
               src="https://www.youtube.com/embed/2k1jHbOtp9k"
               frameborder="0"

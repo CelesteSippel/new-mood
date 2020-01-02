@@ -21,11 +21,11 @@ const Header = () => {
               Shows
             </Link>
           </li>
-          <li>
+          {/* <li>
             <Link to="/PressKit" className="nav-details">
               Press Kit
             </Link>
-          </li>
+          </li> */}
           <li>
             <Link to="/Contact" className="nav-details">
               Contact

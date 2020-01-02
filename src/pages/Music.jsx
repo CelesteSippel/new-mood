@@ -19,7 +19,7 @@ const Music = () => {
         className="player"
       ></iframe>
 
-      <div class="content">
+      <div class="guitar-pic">
         <img src={guitar} />
       </div>
 
