@@ -1,11 +1,106 @@
-import React from 'react'
+import React, { useState } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
+import axios from 'axios'
+import purple from '../assets/purple.JPG'
+
 const Contact = () => {
+  const [resetPage, setResetPage] = useState(false)
+  const [name, setName] = useState('')
+  const [email, setEmail] = useState('')
+  const [eventDate, setEventDate] = useState('')
+  const [eventLocation, setEventLocation] = useState('')
+  const [eventDetails, setEventDetails] = useState('')
+
+  const submitData = async e => {
+    e.preventDefault()
+    const resp = await axios.post('', {
+      name: name,
+      email: email,
+      eventDate: eventDate,
+      eventLocation: eventLocation,
+      eventDetails: eventDetails,
+    })
+    console.log(resp.data)
+    setResetPage(true)
+  }
   return (
     <>
       <Header />
-      <div></div>
+      <div className="form-overlay">
+        <section>
+          <h2 className="booking-title">Contact New Mood for Bookings</h2>
+          <form onSubmit={submitData}>
+            <section className="booking-form">
+              <section className="labels">
+                <label htmlFor="name">Name</label>
+                <input
+                  className="form-input"
+                  onChange={e => {
+                    setName(e.target.value)
+                  }}
+                  value={name}
+                  type="text"
+                />
+              </section>
+
+              <section className="labels">
+                <label htmlFor="email">Email</label>
+                <input
+                  className="form-input"
+                  onChange={e => {
+                    setEmail(e.target.value)
+                  }}
+                  value={email}
+                  type="text"
+                />
+              </section>
+
+              <section className="labels">
+                <label htmlFor="eventDate">Event Date</label>
+                <input
+                  className="dateBox"
+                  onChange={e => {
+                    setEventDate(e.target.value)
+                  }}
+                  value={eventDate}
+                  type="date"
+                />
+              </section>
+
+              <section className="labels">
+                <label htmlFor="eventLocation">Event Location</label>
+                <input
+                  className="form-input"
+                  onChange={e => {
+                    setEventLocation(e.target.value)
+                  }}
+                  value={eventLocation}
+                  type="text"
+                />
+              </section>
+
+              <section className="labels">
+                <label htmlFor="eventDetails">Event Details</label>
+                <input
+                  className="form-input"
+                  onChange={e => {
+                    setEventDetails(e.target.value)
+                  }}
+                  value={eventDetails}
+                  type="text"
+                />
+              </section>
+              <section className="form-button">
+                <button type="submit">Submit</button>
+              </section>
+            </section>
+          </form>
+        </section>
+      </div>
+      <div className="gig-pic">
+        <img src={purple} />
+      </div>
       <Footer />
     </>
   )

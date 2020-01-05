@@ -7,7 +7,7 @@ const Shows = () => {
   const [shows, setShows] = useState([])
 
   const getShowData = async () => {
-    const resp = await axios.get('')
+    const resp = await axios.get('https://localhost:5001/api/New-Mood')
     setShows(resp.data)
   }
 
@@ -21,7 +21,13 @@ const Shows = () => {
       <div>
         <h2 className="upcoming-shows">Upcoming Shows</h2>
         <section className="events">
-          <section className="event-info"></section>
+          <section className="event-info">
+            <ul>
+              <li></li>
+              <li></li>
+              <li></li>
+            </ul>
+          </section>
         </section>
       </div>
       <Footer />

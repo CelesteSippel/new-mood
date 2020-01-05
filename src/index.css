@@ -30,7 +30,6 @@ body {
 
 .player {
   position: absolute;
-
   top: 19.25rem;
   left: 60.25rem;
   z-index: 12;
@@ -90,7 +89,7 @@ li {
   height: 100%;
   background-color: rgb(65, 159, 173);
 }
-
+.gig-pic,
 .guitar-pic,
 .hero-pic {
   display: flex;
@@ -130,7 +129,6 @@ input {
   font-style: normal;
   line-height: 1rem;
   font-weight: 400;
-
   color: black;
   background-color: transparent;
   height: 20px;
@@ -153,8 +151,8 @@ input {
 }
 
 .email-list input[type='email']::placeholder {
-  color: pink;
-  font-size: 1.5em;
+  color: black;
+  font-size: 1em;
 }
 
 .padding {
@@ -225,6 +223,86 @@ input {
   transition: all 0.4s ease;
 }
 
+.booking-form {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+  background-color: transparent;
+
+  margin-left: 22rem;
+  margin-right: 22rem;
+  height: 30rem;
+}
+
+.booking-title {
+  display: flex;
+  justify-content: center;
+
+  color: white;
+  font-weight: bold;
+  font-size: 2rem;
+}
+.labels {
+  display: flex;
+  /* flex-direction: column; */
+  height: 0.25rem;
+  font-size: 1.25rem;
+  padding: 2rem;
+  align-items: flex-start;
+  justify-content: space-between;
+}
+label {
+  color: white;
+}
+input[type='date'].dateBox {
+  font-size: 0.95rem;
+  text-align: center;
+}
+
+.form-input {
+  border: 1px solid white;
+  width: 20rem;
+  border-radius: 3px;
+  margin-bottom: 0.25rem;
+  font-size: 1rem;
+  color: white;
+}
+form {
+  display: flex;
+
+  justify-content: center;
+}
+
+.form-button {
+  display: flex;
+  justify-content: center;
+}
+
+.form-overlay {
+  position: absolute;
+  top: 10rem;
+  left: 25rem;
+  height: 38rem;
+  width: 38rem;
+  background-color: rgba(255, 255, 255, 0.25);
+  border-radius: 10px;
+  z-index: 10;
+}
 /* .footer {
   margin-bottom: 3rem;
+} */
+
+/* @media (min-width: 320px) and (max-width: 480px) {
+  img {
+    height: rem;
+    width: 100%;
+  }
+
+  .video {
+  display: flex;
+  position: relative;
+  height: 55rem;
+  width: 100%;
+}
 } */
