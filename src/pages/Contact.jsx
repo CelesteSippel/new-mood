@@ -33,7 +33,9 @@ const Contact = () => {
           <form onSubmit={submitData}>
             <section className="booking-form">
               <section className="labels">
-                <label htmlFor="name">Name</label>
+                <label htmlFor="name" className="name-input">
+                  Name
+                </label>
                 <input
                   className="form-input"
                   onChange={e => {
@@ -91,9 +93,9 @@ const Contact = () => {
                   type="text"
                 />
               </section>
-              <section className="form-button">
-                <button type="submit">Submit</button>
-              </section>
+              <span>
+                <input type="submit" value="Submit" className="form-button" />
+              </span>
             </section>
           </form>
         </section>

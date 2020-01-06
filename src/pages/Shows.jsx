@@ -20,13 +20,18 @@ const Shows = () => {
       <Header />
       <div>
         <h2 className="upcoming-shows">Upcoming Shows</h2>
-        <section className="events">
+        <section className="events-box">
           <section className="event-info">
-            <ul>
-              <li></li>
-              <li></li>
-              <li></li>
-            </ul>
+            {shows.map(show => {
+              return (
+                <ul>
+                  <li>Key: {show.Id}</li>
+                  <li>Event: {show.Event}</li>
+                  <li>Location: {show.Location}</li>
+                  <li>Date: {show.Date}</li>
+                </ul>
+              )
+            })}
           </section>
         </section>
       </div>
