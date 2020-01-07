@@ -12,6 +12,9 @@ const Contact = () => {
   const [eventLocation, setEventLocation] = useState('')
   const [eventDetails, setEventDetails] = useState('')
 
+  // Need to create api post for this page
+  // ask how to make it so when they hit return in form it goes to the next input box
+
   const submitData = async e => {
     e.preventDefault()
     const resp = await axios.post('', {
@@ -37,6 +40,7 @@ const Contact = () => {
                   Name
                 </label>
                 <input
+                  placeholder="Name"
                   className="form-input"
                   onChange={e => {
                     setName(e.target.value)
@@ -49,6 +53,7 @@ const Contact = () => {
               <section className="labels">
                 <label htmlFor="email">Email</label>
                 <input
+                  placeholder="Email"
                   className="form-input"
                   onChange={e => {
                     setEmail(e.target.value)
@@ -73,6 +78,7 @@ const Contact = () => {
               <section className="labels">
                 <label htmlFor="eventLocation">Event Location</label>
                 <input
+                  placeholder="Location"
                   className="form-input"
                   onChange={e => {
                     setEventLocation(e.target.value)
@@ -84,14 +90,14 @@ const Contact = () => {
 
               <section className="labels">
                 <label htmlFor="eventDetails">Event Details</label>
-                <input
-                  className="form-input"
+                <textarea
+                  placeholder="Booking Details..."
+                  className="form-event-details-input"
                   onChange={e => {
                     setEventDetails(e.target.value)
                   }}
                   value={eventDetails}
-                  type="text"
-                />
+                ></textarea>
               </section>
               <span>
                 <input type="submit" value="Submit" className="form-button" />
