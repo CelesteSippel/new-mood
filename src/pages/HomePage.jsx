@@ -2,11 +2,13 @@ import React from 'react'
 import Header from '../components/Header'
 import pink from '../assets/pink.JPG'
 import Footer from '../components/Footer'
+import SideNav from '../components/SideNav'
 
 const HomePage = () => {
   return (
     <>
       <Header />
+      <SideNav />
       <div>
         <main>
           <div className="hero-pic">

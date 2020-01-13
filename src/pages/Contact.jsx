@@ -3,6 +3,7 @@ import Header from '../components/Header'
 import Footer from '../components/Footer'
 import axios from 'axios'
 import purple from '../assets/purple.JPG'
+import SideNav from '../components/SideNav'
 
 const Contact = () => {
   const [resetPage, setResetPage] = useState(false)
@@ -30,6 +31,7 @@ const Contact = () => {
   return (
     <>
       <Header />
+      <SideNav />
       <div className="form-overlay">
         <section>
           <h2 className="booking-title">Contact New Mood for Bookings</h2>

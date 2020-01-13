@@ -2,11 +2,13 @@ import React from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import guitar from '../assets/guitar.JPG'
+import SideNav from '../components/SideNav'
 
 const Music = () => {
   return (
     <>
       <Header />
+      <SideNav />
       <div className="overlay"></div>
 
       <iframe

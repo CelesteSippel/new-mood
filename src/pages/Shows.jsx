@@ -2,6 +2,8 @@ import React, { useState, useEffect } from 'react'
 import Header from '../components/Header'
 import Footer from '../components/Footer'
 import axios from 'axios'
+import SideNav from '../components/SideNav'
+import two from '../assets/two.JPG'
 
 const Shows = () => {
   const [shows, setShows] = useState([])
@@ -29,23 +31,25 @@ const Shows = () => {
   return (
     <>
       <Header />
+      <SideNav />
       <div>
         <h2 className="upcoming-shows">Upcoming Shows</h2>
-        <section className="events-box">
-          <section className="event-info">
+        <section>
+          <section className="event-info ">
             {shows.map(show => {
               return (
-                <ul>
-                  <li>Key: {show.id}</li>
-                  <li>Event: {show.event}</li>
-                  <li>Location: {show.location}</li>
-                  <li>Date: {show.date}</li>
+                <ul className="events-box">
+                  <li className="event-detail">{show.date}</li>
+
+                  <li className="event-detail">{show.event}</li>
+                  <li className="event-detail">{show.location}</li>
                 </ul>
               )
             })}
           </section>
         </section>
       </div>
+
       <Footer />
     </>
   )

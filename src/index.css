@@ -4,6 +4,7 @@
 
 html {
   margin: 0;
+  overflow-x: hidden;
   min-height: 100%;
 }
 
@@ -17,7 +18,140 @@ body {
   font-family: 'Raleway', sans-serif;
 }
 
+.main {
+  margin: 0 auto;
+  display: block;
+  height: 100%;
+  margin-top: 60px;
+}
+.mainInner {
+  display: table;
+  height: 100%;
+  width: 100%;
+  text-align: center;
+}
+.mainInner div {
+  display: table-cell;
+  vertical-align: center;
+  font-size: 3em;
+  font-weight: bold;
+  letter-spacing: 1.25px;
+  padding-bottom: 20rem;
+}
+#sidebarMenu {
+  height: 50%;
+  position: fixed;
+  left: 0;
+  width: 150px;
+  z-index: 15;
+  margin-top: 9rem;
+  transform: translateX(-250px);
+  transition: transform 250ms ease-in-out;
+  background: transparent;
+  /* background: linear-gradient(
+    180deg,
+    rgb(79, 221, 243) 0%,
+    rgb(30, 76, 83) 100%
+  ); */
+}
+.sidebarMenuInner {
+  margin: 0;
+  padding: 0;
+  border-top: 1px solid rgba(255, 255, 255, 0.1);
+}
+.sidebarMenuInner li {
+  list-style: none;
+  color: #fff;
+  /* text-transform: uppercase; */
+  font-weight: bold;
+  padding: 20px;
+  cursor: pointer;
+  border-bottom: 1px solid rgba(255, 255, 255, 0.1);
+}
+.sidebarMenuInner li span {
+  display: block;
+  font-size: 14px;
+  color: rgba(255, 255, 255, 0.5);
+}
+.sidebarMenuInner li a {
+  color: #fff;
+  /* text-transform: uppercase; */
+  font-weight: bold;
+  cursor: pointer;
+  text-decoration: none;
+}
+input[type='checkbox']:checked ~ #sidebarMenu {
+  transform: translateX(0);
+}
+
+input[type='checkbox'] {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  display: none;
+}
+.sidebarIconToggle {
+  visibility: hidden;
+
+  transition: all 0.3s;
+  box-sizing: border-box;
+  cursor: pointer;
+  position: absolute;
+  z-index: 99;
+  height: 100%;
+  width: 100%;
+  margin-top: 6rem;
+  top: 22px;
+  left: 15px;
+  height: 28px;
+  width: 28px;
+}
+.spinner {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: absolute;
+  height: 3px;
+  width: 100%;
+  background-color: #fff;
+}
+.horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+.diagonal.part-1 {
+  position: relative;
+  transition: all 0.3s;
+  box-sizing: border-box;
+  float: left;
+}
+.diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  position: relative;
+  float: left;
+  margin-top: 3px;
+}
+input[type='checkbox']:checked ~ .sidebarIconToggle > .horizontal {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  opacity: 0;
+}
+input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-1 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(135deg);
+  margin-top: 8px;
+}
+input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-2 {
+  transition: all 0.3s;
+  box-sizing: border-box;
+  transform: rotate(-135deg);
+  margin-top: -9px;
+}
 .overlay {
+  visibility: visible;
   position: absolute;
   top: 18rem;
   left: 59rem;
@@ -71,7 +205,7 @@ li {
 .sub-nav {
   display: flex;
   flex-direction: row;
-
+  visibility: visible;
   padding: 1.25rem;
 }
 
@@ -104,6 +238,13 @@ li {
   height: 45rem;
   width: 100%;
 }
+/* iframe {
+  display: flex;
+  position: relative;
+  height: 45rem;
+  width: 100%;
+} */
+
 img {
   height: 55rem;
   width: 100%;
@@ -180,17 +321,36 @@ input {
   text-align: center;
   font-size: 3rem;
 
-  margin-top: 10rem;
-  margin-bottom: 5rem;
+  margin-top: 8rem;
+  margin-bottom: 2rem;
 }
 
-.events {
+.events-box {
   min-height: 100%;
-  margin-top: 2rem;
-  margin-left: 2rem;
-  margin-right: 2rem;
-  margin-bottom: 2rem;
-  border: solid pink 2px;
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  justify-content: space-around;
+  margin-top: 0rem;
+  margin-left: 0rem;
+  margin-right: 0rem;
+  margin-bottom: 0rem;
+  font-size: 1.5rem;
+  color: black;
+  border: solid rgb(65, 159, 173) 4px;
+}
+
+.event-info {
+  margin-left: 6rem;
+  margin-right: 6rem;
+  background-color: rgba(255, 255, 255, 0.7);
+
+  z-index: 10;
+}
+
+.event-detail {
+  padding-top: 2rem;
+  padding-bottom: 2rem;
 }
 .social-media {
   margin: 0 auto;
@@ -217,7 +377,8 @@ input {
 }
 
 .name:hover,
-.nav-details:hover {
+.nav-details:hover,
+.side-nav-details:hover {
   color: salmon;
   cursor: pointer;
   transition: all 0.4s ease;
@@ -247,13 +408,14 @@ input {
 .labels {
   display: flex;
   flex-direction: column;
+  color: white;
   /* height: 0.25rem; */
   font-size: 1.5rem;
   padding: 0.5rem;
   align-items: flex-start;
   justify-content: space-between;
 }
-label {
+.form-label {
   color: white;
   padding-right: 5rem;
   font-weight: bold;
@@ -278,7 +440,6 @@ input[type='date'].dateBox {
   background-color: whitesmoke;
 }
 
-/* ask Jason how to move the cursor to the top of details box */
 .form-event-details-input {
   border: 1px solid white;
   width: 30rem;
@@ -321,20 +482,176 @@ form {
   border-radius: 10px;
   z-index: 10;
 }
-/* .footer {
-  margin-bottom: 3rem;
-} */
 
-/* @media (min-width: 320px) and (max-width: 480px) {
+@media (min-width: 481px) and (max-width: 767px) {
+  .name {
+    display: flex;
+    align-items: left;
+    padding: 0.5rem;
+    margin-left: 1rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+  }
+  .sub-nav {
+    visibility: hidden;
+    display: flex;
+    flex-direction: row;
+    padding: 1.25rem;
+  }
+
   img {
-    height: rem;
+    height: 35rem;
+
+    width: 100%;
+  }
+
+  iframe {
+    display: flex;
+    position: relative;
+    height: 35rem;
+    width: 100%;
+  }
+
+  .sidebarIconToggle {
+    visibility: visible;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    margin-top: 6rem;
+    top: 22px;
+    left: 15px;
+    height: 28px;
+    width: 28px;
+  }
+}
+
+@media (min-width: 320px) and (max-width: 480px) {
+  .name {
+    display: flex;
+    align-items: left;
+    padding: 0.5rem;
+    margin-left: 0.25rem;
+    margin-top: 0.25rem;
+    margin-bottom: 0.25rem;
+    font-size: 2rem;
+    font-weight: bold;
+    color: white;
+  }
+
+  .sub-nav {
+    visibility: hidden;
+    display: flex;
+    flex-direction: row;
+    padding: 1.25rem;
+  }
+
+  img {
+    height: 25rem;
     width: 100%;
   }
 
   .video {
-  display: flex;
-  position: relative;
-  height: 55rem;
-  width: 100%;
+    display: flex;
+    position: relative;
+    height: 25rem;
+    width: 100%;
+  }
+
+  iframe {
+    display: flex;
+    position: relative;
+    height: 25rem;
+    width: 100%;
+  }
+
+  .sidebarIconToggle {
+    visibility: visible;
+    transition: all 0.3s;
+    box-sizing: border-box;
+    cursor: pointer;
+    position: absolute;
+    z-index: 99;
+    height: 100%;
+    width: 100%;
+    margin-top: 6rem;
+    top: 22px;
+    left: 15px;
+    height: 28px;
+    width: 28px;
+  }
+
+  .overlay {
+    visibility: visible;
+    position: absolute;
+    top: 20rem;
+    left: 0rem;
+    height: 26rem;
+    width: 21rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    z-index: 30;
+  }
+
+  .player {
+    position: absolute;
+    top: 29.25rem;
+    left: 0rem;
+    z-index: 12;
+  }
+
+  .footer {
+    margin-top: 0;
+    margin-bottom: 6rem;
+    z-index: 70;
+  }
+
+  .footer-text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .social-media {
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    max-width: 160px;
+  }
+
+  .events-box {
+    min-height: 100%;
+    text-align: center;
+    margin-top: 0rem;
+    margin-left: 0rem;
+    margin-right: 0rem;
+    margin-bottom: 0rem;
+    font-size: 1.5rem;
+    color: black;
+    border: solid rgba(65, 159, 173, 0.7) 2px;
+  }
+
+  .event-info {
+    margin-left: 15rem;
+    margin-right: 15rem;
+    background-color: rgba(255, 255, 255, 0.7);
+    position: absolute;
+    z-index: 10;
+  }
+
+  .event-detail {
+    padding-top: 3px;
+    padding-bottom: 6px;
+  }
 }
-} */
