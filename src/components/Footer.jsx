@@ -1,6 +1,20 @@
-import React from 'react'
+import React, { useState } from 'react'
+import axios from 'axios'
 
 const Footer = () => {
+  const [email, setEmail] = useState('')
+  const [resetForm, setResetForm] = useState(false)
+
+  const submitData = async event => {
+    event.preventDefault()
+
+    const resp = await axios.post('https://localhost:5001/api/EmailList', {
+      email: email,
+    })
+    console.log(resp.data)
+    setResetForm(true)
+  }
+
   return (
     <div className="footer">
       <div>
@@ -9,11 +23,26 @@ const Footer = () => {
         </h2>
       </div>
       <div>
-        <form className="email-list">
+        <form
+          onSubmit={e => {
+            submitData(e)
+            alert('Email Added')
+          }}
+          className="email-list"
+        >
           <span>
-            <label className="padding">Email</label>
+            <label htmlFor="email" className="padding">
+              Email
+            </label>
           </span>
-          <input type="email" placeholder="Email Address" />
+          <input
+            onChange={e => {
+              setEmail(e.target.value)
+            }}
+            type="email"
+            value={email}
+            placeholder="Email Address"
+          />
           <span>
             <input type="submit" value="Submit" className="button" />
           </span>
