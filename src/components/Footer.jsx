@@ -1,10 +1,9 @@
 import React, { useState } from 'react'
 import axios from 'axios'
+import { Redirect } from 'react-router-dom'
 
 const Footer = () => {
   const [email, setEmail] = useState('')
-  const [resetForm, setResetForm] = useState(false)
-
   const submitData = async event => {
     event.preventDefault()
 
@@ -12,7 +11,7 @@ const Footer = () => {
       email: email,
     })
     console.log(resp.data)
-    setResetForm(true)
+    setEmail('')
   }
 
   return (
