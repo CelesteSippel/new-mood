@@ -6,7 +6,6 @@ import purple from '../assets/purple.JPG'
 import SideNav from '../components/SideNav'
 
 const Contact = () => {
-  const [resetPage, setResetPage] = useState(false)
   const [name, setName] = useState('')
   const [email, setEmail] = useState('')
   const [eventDate, setEventDate] = useState('')
@@ -18,7 +17,7 @@ const Contact = () => {
 
   const submitData = async e => {
     e.preventDefault()
-    const resp = await axios.post('', {
+    const resp = await axios.post('https://localhost:5001/api/Booking', {
       name: name,
       email: email,
       eventDate: eventDate,
@@ -26,7 +25,11 @@ const Contact = () => {
       eventDetails: eventDetails,
     })
     console.log(resp.data)
-    setResetPage(true)
+    setName('')
+    setEmail('')
+    setEventDate('')
+    setEventLocation('')
+    setEventDetails('')
   }
   return (
     <>

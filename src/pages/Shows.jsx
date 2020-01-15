@@ -7,6 +7,7 @@ import Moment from 'react-moment'
 
 const Shows = () => {
   const [shows, setShows] = useState([])
+  const [venue, setVenue] = useState([])
 
   const getShowData = async () => {
     const resp = await axios.get('https://localhost:5001/api/Show')
@@ -33,7 +34,9 @@ const Shows = () => {
                     <Moment format="MMM Do, YYYY">{show.dateOfEvent}</Moment>
                   </li>
                   <li className="event-detail">{show.eventName}</li>
-                  <li className="event-detail">{show.location}</li>
+                  <li className="event-detail">
+                    <a href={show.venueUrl}> {show.venueName}</a>
+                  </li>
                 </ul>
               )
             })}
