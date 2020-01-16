@@ -7,7 +7,7 @@ import Moment from 'react-moment'
 
 const Shows = () => {
   const [shows, setShows] = useState([])
-  const [venue, setVenue] = useState([])
+  // const [venue, setVenue] = useState([])
 
   const getShowData = async () => {
     const resp = await axios.get('https://localhost:5001/api/Show')
