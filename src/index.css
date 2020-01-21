@@ -168,6 +168,7 @@ input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-2 {
   left: 60.25rem;
   z-index: 12;
 }
+
 a:link {
   text-decoration: none;
   -webkit-tap-highlight-color: transparent;
@@ -238,7 +239,7 @@ li {
   height: 45rem;
   width: 100%;
 }
-iframe {
+.you-tube {
   display: flex;
   position: relative;
   height: 45rem;
@@ -508,7 +509,7 @@ form {
     width: 100%;
   }
 
-  iframe {
+  .you-tube {
     display: flex;
     position: relative;
     height: 35rem;

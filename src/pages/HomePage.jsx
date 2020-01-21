@@ -22,6 +22,7 @@ const HomePage = () => {
               frameborder="0"
               allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture"
               allowfullscreen
+              className="you-tube"
             ></iframe>
           </div>
           <Footer />
