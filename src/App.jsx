@@ -10,7 +10,6 @@ import Contact from './pages/Contact'
 const App = () => {
   return (
     <Router>
-      <div></div>
       <Switch>
         <Route exact path="/" component={HomePage}></Route>
         <Route exact path="/Music" component={Music}></Route>
