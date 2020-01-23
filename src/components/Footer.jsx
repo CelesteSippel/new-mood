@@ -7,9 +7,12 @@ const Footer = () => {
   const submitData = async event => {
     event.preventDefault()
 
-    const resp = await axios.post('https://localhost:5001/api/EmailList', {
-      email: email,
-    })
+    const resp = await axios.post(
+      'https://new-mood-api.herokuapp.com/api/EmailList',
+      {
+        email: email,
+      }
+    )
     console.log(resp.data)
     setEmail('')
   }

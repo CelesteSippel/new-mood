@@ -10,7 +10,7 @@ const Shows = () => {
   // const [venue, setVenue] = useState([])
 
   const getShowData = async () => {
-    const resp = await axios.get('https://localhost:5001/api/Show')
+    const resp = await axios.get('https://new-mood-api.herokuapp.com/api/Show')
     console.log(resp.data)
     setShows(resp.data)
   }

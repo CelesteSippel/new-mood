@@ -14,13 +14,16 @@ const Contact = () => {
 
   const submitData = async e => {
     e.preventDefault()
-    const resp = await axios.post('https://localhost:5001/api/Booking', {
-      contactName: contactName,
-      email: email,
-      eventDate: eventDate,
-      eventLocation: eventLocation,
-      eventDetails: eventDetails,
-    })
+    const resp = await axios.post(
+      'https://new-mood-api.herokuapp.com/api/Booking',
+      {
+        contactName: contactName,
+        email: email,
+        eventDate: eventDate,
+        eventLocation: eventLocation,
+        eventDetails: eventDetails,
+      }
+    )
     console.log(resp.data)
     setContactName('')
     setEmail('')
