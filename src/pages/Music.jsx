@@ -9,22 +9,23 @@ const Music = () => {
     <>
       <Header />
       <SideNav />
-      <div className="overlay"></div>
+      <div className="music">
+        <div className="overlay"></div>
 
-      <iframe
-        src="https://open.spotify.com/embed/artist/3uz9jrGXFBjSkfOiFQA0H8"
-        width="300"
-        height="380"
-        frameborder="0"
-        allowtransparency="true"
-        allow="encrypted-media"
-        className="player"
-      ></iframe>
+        <iframe
+          src="https://open.spotify.com/embed/artist/3uz9jrGXFBjSkfOiFQA0H8"
+          width="300"
+          height="380"
+          frameborder="0"
+          allowtransparency="true"
+          allow="encrypted-media"
+          className="player"
+        ></iframe>
 
-      <div class="guitar-pic">
-        <img src={guitar} />
+        <div class="guitar-pic">
+          <img src={guitar} />
+        </div>
       </div>
-
       <Footer />
     </>
   )

@@ -35,84 +35,86 @@ const Contact = () => {
     <>
       <Header />
       <SideNav />
-      <div className="form-overlay">
-        <section>
-          <h2 className="booking-title">Contact New Mood for Bookings</h2>
-          <form onSubmit={submitData}>
-            <section className="booking-form">
-              <section className="labels">
-                <label htmlFor="name" className="name-input">
-                  Name
-                </label>
-                <input
-                  placeholder="Name"
-                  className="form-input"
-                  onChange={e => {
-                    setContactName(e.target.value)
-                  }}
-                  value={contactName}
-                  type="text"
-                />
-              </section>
+      <div className="contact-form">
+        <div className="form-overlay">
+          <h2 className="booking-title">Book Us!!</h2>
+          <section>
+            <form onSubmit={submitData}>
+              <section className="booking-form">
+                <section className="labels">
+                  <label htmlFor="name" className="name-input">
+                    Name
+                  </label>
+                  <input
+                    placeholder="Name"
+                    className="form-input"
+                    onChange={e => {
+                      setContactName(e.target.value)
+                    }}
+                    value={contactName}
+                    type="text"
+                  />
+                </section>
 
-              <section className="labels">
-                <label htmlFor="email">Email</label>
-                <input
-                  placeholder="Email"
-                  className="form-input"
-                  onChange={e => {
-                    setEmail(e.target.value)
-                  }}
-                  value={email}
-                  type="text"
-                />
-              </section>
+                <section className="labels">
+                  <label htmlFor="email">Email</label>
+                  <input
+                    placeholder="Email"
+                    className="form-input"
+                    onChange={e => {
+                      setEmail(e.target.value)
+                    }}
+                    value={email}
+                    type="text"
+                  />
+                </section>
 
-              <section className="labels">
-                <label htmlFor="eventDate">Event Date</label>
-                <input
-                  className="dateBox"
-                  onChange={e => {
-                    setEventDate(e.target.value)
-                  }}
-                  value={eventDate}
-                  type="date"
-                />
-              </section>
+                <section className="labels">
+                  <label htmlFor="eventDate">Event Date</label>
+                  <input
+                    className="dateBox"
+                    onChange={e => {
+                      setEventDate(e.target.value)
+                    }}
+                    value={eventDate}
+                    type="date"
+                  />
+                </section>
 
-              <section className="labels">
-                <label htmlFor="eventLocation">Event Location</label>
-                <input
-                  placeholder="Location"
-                  className="form-input"
-                  onChange={e => {
-                    setEventLocation(e.target.value)
-                  }}
-                  value={eventLocation}
-                  type="text"
-                />
-              </section>
+                <section className="labels">
+                  <label htmlFor="eventLocation">Event Location</label>
+                  <input
+                    placeholder="Location"
+                    className="form-input"
+                    onChange={e => {
+                      setEventLocation(e.target.value)
+                    }}
+                    value={eventLocation}
+                    type="text"
+                  />
+                </section>
 
-              <section className="labels">
-                <label htmlFor="eventDetails">Event Details</label>
-                <textarea
-                  placeholder="Booking Details..."
-                  className="form-event-details-input"
-                  onChange={e => {
-                    setEventDetails(e.target.value)
-                  }}
-                  value={eventDetails}
-                ></textarea>
+                <section className="labels">
+                  <label htmlFor="eventDetails">Event Details</label>
+                  <textarea
+                    placeholder="Booking Details..."
+                    className="form-event-details-input"
+                    onChange={e => {
+                      setEventDetails(e.target.value)
+                    }}
+                    value={eventDetails}
+                  ></textarea>
+                </section>
+                <span>
+                  <input type="submit" value="Submit" className="form-button" />
+                </span>
               </section>
-              <span>
-                <input type="submit" value="Submit" className="form-button" />
-              </span>
-            </section>
-          </form>
-        </section>
-      </div>
-      <div className="gig-pic">
-        <img src={purple} />
+            </form>
+          </section>
+        </div>
+        <div className="gig-pic">
+          <img src={purple} />
+        </div>
       </div>
       <Footer />
     </>

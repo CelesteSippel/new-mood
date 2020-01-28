@@ -23,7 +23,7 @@ const Shows = () => {
     <>
       <Header />
       <SideNav />
-      <div>
+      <div className="shows">
         <h2 className="upcoming-shows">Upcoming Shows</h2>
         <section>
           <section className="event-info ">

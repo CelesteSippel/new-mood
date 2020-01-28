@@ -1,5 +1,6 @@
 :root {
   font: 16px / 1 sans-serif;
+  width: 100%;
 }
 
 html {
@@ -74,7 +75,7 @@ body {
   color: rgba(255, 255, 255, 0.5);
 }
 .sidebarMenuInner li a {
-  color: #fff;
+  color: salmon;
   /* text-transform: uppercase; */
   font-weight: bold;
   cursor: pointer;
@@ -153,8 +154,9 @@ input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 .overlay {
   visibility: visible;
   position: absolute;
-  top: 18rem;
-  left: 59rem;
+  top: 19rem;
+  left: 60rem;
+  right: 30rem;
   height: 26rem;
   width: 21rem;
   background-color: rgba(255, 255, 255, 0.5);
@@ -164,8 +166,8 @@ input[type='checkbox']:checked ~ .sidebarIconToggle > .diagonal.part-2 {
 
 .player {
   position: absolute;
-  top: 19.25rem;
-  left: 60.25rem;
+  top: 20.25rem;
+  left: 61.25rem;
   z-index: 12;
 }
 
@@ -252,7 +254,7 @@ img {
 }
 
 .footer {
-  margin-top: 0;
+  margin-top: 2rem;
   margin-bottom: 1.75rem;
 }
 .footer-text {
@@ -321,7 +323,6 @@ input {
   color: white;
   text-align: center;
   font-size: 3rem;
-
   margin-top: 8rem;
   margin-bottom: 2rem;
 }
@@ -345,7 +346,6 @@ input {
   margin-left: 6rem;
   margin-right: 6rem;
   background-color: rgba(255, 255, 255, 0.7);
-
   z-index: 10;
 }
 
@@ -377,12 +377,22 @@ input {
   color: salmon;
 }
 
-.name:hover,
-.nav-details:hover,
 .side-nav-details:hover {
+  color: gray;
+  cursor: pointer;
+  transition: all 0.4s ease;
+}
+.name:hover,
+.nav-details:hover {
   color: salmon;
   cursor: pointer;
   transition: all 0.4s ease;
+}
+
+.contact-form {
+  min-height: 25rem;
+  display: flex;
+  justify-content: center;
 }
 
 .booking-form {
@@ -484,6 +494,486 @@ form {
   z-index: 10;
 }
 
+@media (min-width: 1025px) and (max-width: 1280px) {
+  .footer {
+    margin-top: 2rem;
+    margin-bottom: 1.75rem;
+  }
+  .footer-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 0rem;
+    margin-left: 12rem;
+    margin-right: 10rem;
+    color: white;
+    font-size: 2.15rem;
+  }
+
+  .gig-pic,
+  .guitar-pic,
+  .hero-pic {
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  img {
+    height: 45rem;
+    width: 100%;
+  }
+
+  .overlay {
+    visibility: visible;
+    display: flex;
+    position: absolute;
+    top: 20.5rem;
+    left: 50rem;
+    height: 23rem;
+    width: 21rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    z-index: 10;
+  }
+
+  .player {
+    position: absolute;
+    top: 22rem;
+    height: 20rem;
+    left: 51rem;
+    width: 19rem;
+    z-index: 12;
+  }
+
+  .footer {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    z-index: 70;
+  }
+
+  .contact-form {
+    min-height: 25rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .booking-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    height: 30rem;
+  }
+
+  .booking-title {
+    display: flex;
+    justify-content: center;
+
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  .labels {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    /* height: 0.25rem; */
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .form-label {
+    color: white;
+    padding-right: 5rem;
+    font-weight: bold;
+  }
+
+  input[type='date'].dateBox {
+    font-size: 0.95rem;
+    text-align: center;
+    width: 30rem;
+    height: 1.5rem;
+    border-radius: 3px;
+    color: black;
+    background-color: whitesmoke;
+  }
+  .form-input {
+    border: 1px solid white;
+    width: 30rem;
+    height: 1.5rem;
+    border-radius: 3px;
+    font-size: 1rem;
+    color: black;
+    background-color: whitesmoke;
+  }
+
+  .form-event-details-input {
+    border: 1px solid white;
+    width: 30rem;
+    height: 7.5rem;
+    border-radius: 3px;
+    font-size: 1rem;
+    color: black;
+    background-color: whitesmoke;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-button {
+    display: flex;
+    justify-content: center;
+    margin-left: 14rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    height: 36px;
+    width: 72px;
+    color: white;
+    background-color: salmon;
+    font-weight: 500;
+    border-radius: 4px;
+  }
+  .form-button:hover {
+    background-color: black;
+    color: white;
+  }
+  .form-overlay {
+    position: absolute;
+    top: 5rem;
+    left: 15rem;
+    height: 38rem;
+    width: 38rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    z-index: 10;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) {
+  .footer {
+    margin-top: 2rem;
+    margin-bottom: 1.75rem;
+  }
+  .footer-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 0rem;
+    margin-left: 12rem;
+    margin-right: 10rem;
+    color: white;
+    font-size: 2.15rem;
+  }
+
+  .gig-pic,
+  .guitar-pic,
+  .hero-pic {
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  img {
+    height: 45rem;
+    width: 100%;
+  }
+
+  .overlay {
+    visibility: visible;
+    display: flex;
+    position: absolute;
+    top: 22.5rem;
+    left: 25rem;
+    height: 21rem;
+    width: 21rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    z-index: 10;
+  }
+
+  .player {
+    position: absolute;
+    top: 24rem;
+    height: 18rem;
+    left: 26rem;
+    width: 19rem;
+    z-index: 12;
+  }
+
+  .footer {
+    margin-top: 4rem;
+    margin-bottom: 1rem;
+    z-index: 70;
+  }
+
+  .contact-form {
+    min-height: 25rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .booking-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    height: 24rem;
+  }
+
+  .booking-title {
+    display: flex;
+    justify-content: center;
+
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  .labels {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    /* height: 0.25rem; */
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .form-label {
+    color: white;
+    padding-right: 5rem;
+    font-weight: bold;
+  }
+
+  input[type='date'].dateBox {
+    font-size: 0.95rem;
+    text-align: center;
+    width: 30rem;
+    height: 1.5rem;
+    border-radius: 3px;
+    color: black;
+    background-color: whitesmoke;
+  }
+  .form-input {
+    border: 1px solid white;
+    width: 30rem;
+    height: 1.5rem;
+    border-radius: 3px;
+    font-size: 1rem;
+    color: black;
+    background-color: whitesmoke;
+  }
+
+  .form-event-details-input {
+    border: 1px solid white;
+    width: 30rem;
+    height: 5.5rem;
+    border-radius: 3px;
+    font-size: 1rem;
+    color: black;
+    background-color: whitesmoke;
+  }
+
+  .form-button {
+    display: flex;
+    justify-content: center;
+    margin-left: 14rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    height: 36px;
+    width: 72px;
+    color: white;
+    background-color: salmon;
+    font-weight: 500;
+    border-radius: 4px;
+  }
+  .form-button:hover {
+    background-color: black;
+    color: white;
+  }
+  .form-overlay {
+    position: absolute;
+
+    top: 8rem;
+    left: 5rem;
+    right: 5rem;
+    height: 33rem;
+    width: 38rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    z-index: 10;
+  }
+}
+
+@media (min-width: 768px) and (max-width: 1024px) and (orientation: landscape) {
+  .footer {
+    margin-top: 2rem;
+    margin-bottom: 1.75rem;
+  }
+  .footer-text {
+    display: flex;
+    justify-content: center;
+    flex-direction: row;
+    text-align: center;
+    margin-top: 0rem;
+    margin-left: 12rem;
+    margin-right: 10rem;
+    color: white;
+    font-size: 2.15rem;
+  }
+
+  .gig-pic,
+  .guitar-pic,
+  .hero-pic {
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
+  img {
+    height: 40rem;
+    width: 100%;
+  }
+
+  .overlay {
+    visibility: visible;
+    display: flex;
+    position: absolute;
+    top: 16.5rem;
+    left: 40rem;
+    height: 21rem;
+    width: 21rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    z-index: 10;
+  }
+
+  .player {
+    position: absolute;
+    top: 18rem;
+    height: 18rem;
+    left: 40.5rem;
+    width: 20rem;
+    z-index: 12;
+  }
+
+  .contact-form {
+    min-height: 25rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .booking-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
+
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 1rem;
+    height: 24rem;
+  }
+
+  .booking-title {
+    display: flex;
+    justify-content: center;
+
+    color: white;
+    font-weight: bold;
+    font-size: 2rem;
+  }
+  .labels {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    /* height: 0.25rem; */
+    font-size: 1.5rem;
+    padding: 0.5rem;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .form-label {
+    color: white;
+    padding-right: 5rem;
+    font-weight: bold;
+  }
+
+  input[type='date'].dateBox {
+    font-size: 0.95rem;
+    text-align: center;
+    width: 30rem;
+    height: 1.5rem;
+    border-radius: 3px;
+    color: black;
+    background-color: whitesmoke;
+  }
+  .form-input {
+    border: 1px solid white;
+    width: 30rem;
+    height: 1.5rem;
+    border-radius: 3px;
+    font-size: 1rem;
+    color: black;
+    background-color: whitesmoke;
+  }
+
+  .form-event-details-input {
+    border: 1px solid white;
+    width: 30rem;
+    height: 5.5rem;
+    border-radius: 3px;
+    font-size: 1rem;
+    color: black;
+    background-color: whitesmoke;
+  }
+
+  .form-button {
+    display: flex;
+    justify-content: center;
+    margin-left: 14rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    height: 36px;
+    width: 72px;
+    color: white;
+    background-color: salmon;
+    font-weight: 500;
+    border-radius: 4px;
+  }
+  .form-button:hover {
+    background-color: black;
+    color: white;
+  }
+  .form-overlay {
+    position: absolute;
+
+    top: 5rem;
+    left: 10rem;
+    right: 10rem;
+    height: 33rem;
+    width: 38rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    z-index: 10;
+  }
+}
+
 @media (min-width: 481px) and (max-width: 767px) {
   .name {
     display: flex;
@@ -505,11 +995,26 @@ form {
 
   img {
     height: 35rem;
-
     width: 100%;
   }
 
+  .gig-pic,
+  .guitar-pic,
+  .hero-pic {
+    display: flex;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+  }
+
   .you-tube {
+    display: flex;
+    position: relative;
+    height: 35rem;
+    width: 100%;
+  }
+
+  .video {
     display: flex;
     position: relative;
     height: 35rem;
@@ -531,9 +1036,162 @@ form {
     height: 28px;
     width: 28px;
   }
+
+  .overlay {
+    visibility: visible;
+    display: flex;
+    position: absolute;
+    top: 10rem;
+    left: 8rem;
+    height: 23rem;
+    width: 21rem;
+    background-color: rgba(255, 255, 255, 0.5);
+    border-radius: 10px;
+    z-index: 10;
+  }
+
+  .player {
+    position: absolute;
+    top: 11rem;
+    left: 8.5rem;
+    height: 21rem;
+    width: 20rem;
+    z-index: 12;
+  }
+
+  .footer {
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+    z-index: 70;
+  }
+
+  .footer-text {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    margin: 1rem;
+    padding-left: 1rem;
+    padding-right: 1rem;
+    color: white;
+    font-size: 1.5rem;
+  }
+
+  .contact-form {
+    min-height: 25rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .booking-form {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    background-color: transparent;
+    margin-left: 1rem;
+    margin-right: 1rem;
+    margin-top: 5rem;
+    height: 10rem;
+  }
+
+  .booking-title {
+    display: flex;
+    justify-content: center;
+
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+  }
+  .labels {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    /* height: 0.25rem; */
+    font-size: 1rem;
+    padding: 0.5rem;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .form-label {
+    color: white;
+    padding-right: 5rem;
+    font-weight: bold;
+  }
+
+  input[type='date'].dateBox {
+    font-size: 0.95rem;
+    text-align: center;
+    width: 24rem;
+    height: 1.5rem;
+    border-radius: 3px;
+    color: black;
+    background-color: whitesmoke;
+  }
+  .form-input {
+    border: 1px solid white;
+    width: 24rem;
+    height: 1.5rem;
+    border-radius: 3px;
+    font-size: 1rem;
+    color: black;
+    background-color: whitesmoke;
+  }
+
+  .form-event-details-input {
+    border: 1px solid white;
+    width: 24rem;
+    height: 5.5rem;
+    border-radius: 3px;
+    font-size: 1rem;
+    color: black;
+    background-color: whitesmoke;
+  }
+
+  .form-button {
+    display: flex;
+    justify-content: center;
+    margin-left: 14rem;
+    margin-top: 0.5rem;
+    font-size: 1rem;
+    height: 36px;
+    width: 72px;
+    color: white;
+    background-color: salmon;
+    font-weight: 500;
+    border-radius: 4px;
+  }
+  .form-button:hover {
+    background-color: black;
+    color: white;
+  }
+  .form-overlay {
+    position: absolute;
+
+    top: 7rem;
+    left: 9rem;
+    right: 10rem;
+    height: 33rem;
+    width: 28rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    z-index: 10;
+  }
 }
 
 @media (min-width: 320px) and (max-width: 480px) {
+  .navigation {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+
+    align-items: baseline;
+    position: fixed;
+    background-color: transparent;
+    width: 100%;
+    height: 15%;
+    font-family: 'Raleway', sans-serif;
+    z-index: 13;
+  }
+
   .name {
     display: flex;
     align-items: left;
@@ -541,7 +1199,7 @@ form {
     margin-left: 0.25rem;
     margin-top: 0.25rem;
     margin-bottom: 0.25rem;
-    font-size: 2rem;
+    font-size: 2.5rem;
     font-weight: bold;
     color: white;
   }
@@ -550,11 +1208,19 @@ form {
     visibility: hidden;
     display: flex;
     flex-direction: row;
-    padding: 1.25rem;
+    padding: 0;
+    margin: 0;
   }
 
+  .nav-details {
+    color: white;
+    padding: 0;
+    margin: 0;
+    font-size: 1.25rem;
+    font-weight: lighter;
+  }
   img {
-    height: 25rem;
+    height: 30rem;
     width: 100%;
   }
 
@@ -564,8 +1230,7 @@ form {
     height: 25rem;
     width: 100%;
   }
-
-  iframe {
+  .you-tube {
     display: flex;
     position: relative;
     height: 25rem;
@@ -581,7 +1246,7 @@ form {
     z-index: 99;
     height: 100%;
     width: 100%;
-    margin-top: 6rem;
+    margin-top: 3.5rem;
     top: 22px;
     left: 15px;
     height: 28px;
@@ -590,27 +1255,30 @@ form {
 
   .overlay {
     visibility: visible;
+    display: flex;
     position: absolute;
-    top: 20rem;
-    left: 0rem;
-    height: 26rem;
-    width: 21rem;
+    top: 10rem;
+    left: 4.75rem;
+    height: 16rem;
+    width: 15rem;
     background-color: rgba(255, 255, 255, 0.5);
     border-radius: 10px;
-    z-index: 30;
+    z-index: 10;
   }
 
   .player {
     position: absolute;
-    top: 29.25rem;
-    left: 0rem;
+    top: 11rem;
+    left: 5.25rem;
+    height: 14rem;
+    width: 14rem;
     z-index: 12;
   }
 
   .footer {
-    margin-top: 0;
-    margin-bottom: 6rem;
-    z-index: 70;
+    margin-top: 5.5rem;
+    margin-bottom: 1rem;
+    z-index: 30;
   }
 
   .footer-text {
@@ -631,8 +1299,27 @@ form {
     max-width: 160px;
   }
 
+  .shows {
+    display: flex;
+    flex-direction: column;
+    min-height: 40rem;
+  }
+
+  .music {
+    display: flex;
+    flex-direction: column;
+    min-height: 30rem;
+  }
+  .upcoming-shows {
+    color: white;
+    text-align: center;
+    font-size: 3rem;
+    margin-top: 8rem;
+    margin-bottom: 2rem;
+  }
   .events-box {
     min-height: 100%;
+    align-items: center;
     text-align: center;
     margin-top: 0rem;
     margin-left: 0rem;
@@ -644,8 +1331,9 @@ form {
   }
 
   .event-info {
-    margin-left: 15rem;
-    margin-right: 15rem;
+    margin-left: 2.5rem;
+    margin-right: 5rem;
+    width: 80%;
     background-color: rgba(255, 255, 255, 0.7);
     position: absolute;
     z-index: 10;
@@ -654,5 +1342,115 @@ form {
   .event-detail {
     padding-top: 3px;
     padding-bottom: 6px;
+  }
+
+  .contact-form {
+    min-height: 25rem;
+    display: flex;
+    justify-content: center;
+  }
+
+  .booking-form {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    background-color: transparent;
+    margin-left: 2rem;
+    margin-right: 2rem;
+    margin-top: 7.5rem;
+    height: 2rem;
+  }
+
+  .booking-title {
+    display: flex;
+    justify-content: center;
+
+    color: white;
+    font-weight: bold;
+    font-size: 1.5rem;
+    z-index: 20;
+  }
+  .labels {
+    display: flex;
+    flex-direction: column;
+    color: white;
+    /* height: 0.25rem; */
+    font-size: 1rem;
+    padding: 0.5rem;
+    align-items: flex-start;
+    justify-content: space-between;
+  }
+  .form-label {
+    color: white;
+    padding-right: 1rem;
+    font-weight: bold;
+  }
+
+  input[type='date'].dateBox {
+    font-size: 0.95rem;
+    text-align: center;
+    width: 16.5rem;
+    height: 1.25rem;
+    border-radius: 3px;
+    color: black;
+    background-color: whitesmoke;
+  }
+  .form-input {
+    border: 1px solid white;
+    width: 16.5rem;
+    height: 1.25rem;
+    border-radius: 3px;
+    font-size: 1rem;
+    color: black;
+    background-color: whitesmoke;
+  }
+
+  .form-event-details-input {
+    border: 1px solid white;
+    width: 16.5rem;
+    height: 3.5rem;
+    border-radius: 3px;
+    font-size: 1rem;
+    color: black;
+    background-color: whitesmoke;
+  }
+
+  form {
+    display: flex;
+    justify-content: center;
+  }
+
+  .form-button {
+    display: flex;
+    justify-content: center;
+
+    margin-left: 0rem;
+    margin-top: 0rem;
+    font-size: 1rem;
+    height: 30px;
+    width: 66px;
+    color: white;
+    background-color: salmon;
+    font-weight: 500;
+    border-radius: 4px;
+  }
+  .form-button:hover {
+    background-color: black;
+    color: white;
+  }
+  .form-overlay {
+    position: absolute;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 6rem;
+    left: 2.5rem;
+    right: 1rem;
+    height: 24rem;
+    width: 18.5rem;
+    background-color: rgba(255, 255, 255, 0.25);
+    border-radius: 10px;
+    z-index: 10;
   }
 }
