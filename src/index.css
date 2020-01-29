@@ -486,7 +486,7 @@ form {
 .form-overlay {
   position: absolute;
   top: 10rem;
-  left: 25rem;
+
   height: 38rem;
   width: 38rem;
   background-color: rgba(255, 255, 255, 0.25);
@@ -649,7 +649,7 @@ form {
   .form-overlay {
     position: absolute;
     top: 5rem;
-    left: 25rem !important;
+
     height: 38rem;
     width: 38rem;
     background-color: rgba(255, 255, 255, 0.25);
@@ -819,7 +819,7 @@ form {
   }
 }
 
-@media (min-height: 414px) and (min-width: 736px) and (orientation: landscape) {
+@media (min-height: 414px) and (max-height: 424px) and (min-width: 736px) and (max-width: 746px) and (orientation: landscape) {
   .contact-form {
     min-height: 25rem;
     display: flex;
@@ -920,7 +920,8 @@ form {
   }
 }
 
-@media (min-height: 375px) and (min-width: 812px) and (orientation: landscape) {
+/* @media (375px <= height <= 390px) and (min-width: 812px) and (orientation: landscape) { */
+@media (min-height: 375px) and (max-height: 395px) and (min-width: 812px) and (max-width: 822px) and (orientation: landscape) {
   .contact-form {
     min-height: 25rem;
     display: flex;
@@ -1683,7 +1684,7 @@ form {
     margin-left: 2rem;
     margin-right: 2rem;
     margin-top: 0.5rem;
-    height: 20rem;
+    height: 16rem;
   }
 
   .booking-title {
@@ -1771,7 +1772,7 @@ form {
     top: 6rem;
     left: 2.5rem;
     right: 1rem;
-    height: 28rem;
+    height: 22rem;
     width: 18.5rem;
     background-color: rgba(255, 255, 255, 0.25);
     border-radius: 10px;

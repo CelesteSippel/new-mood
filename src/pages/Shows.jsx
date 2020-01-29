@@ -35,7 +35,10 @@ const Shows = () => {
                   </li>
                   <li className="event-detail">{show.eventName}</li>
                   <li className="event-detail">
-                    <a href={show.venueUrl}> {show.venueName}</a>
+                    <a target="_blank" href={show.venueUrl}>
+                      {' '}
+                      {show.venueName}
+                    </a>
                   </li>
                 </ul>
               )
